@@ -14,7 +14,7 @@ export const colors = {
   baseGray: "#667381",
   baseGrayLight: "#99A2AB",
   baseGrayDark: "#334457",
-  baseGrayXdark: "#00162E",
+  baseGrayXDark: "#00162E",
   baseGrayXlight: "#EDEEF0",
   baseWhite: "#FFFFFF",
   statesError: "#CB3135",
