@@ -1,5 +1,8 @@
 import React from "react";
 import { Button } from "./components/button";
+import { H1 } from "./components/typography/headline/h1";
+import { H2 } from "./components/typography/headline/h2";
+import { LinkButton } from "./components/link-button";
 
 function App() {
   return (
@@ -12,6 +15,8 @@ function App() {
         gap: "16px",
       }}
     >
+      <H1>Styleguide</H1>
+      <H2>Botões</H2>
       <p>versão CTA </p>
       <Button variant="CTA">Entrar</Button>
       <p>versão estendida compact CTA </p>
@@ -43,8 +48,16 @@ function App() {
         Adicionar
       </Button>
       <Button variant="secondary">Adicionar</Button>
-      <p>versão link</p>
-      <Button icon variant="link">Adicionar</Button>
+      <p>versão link destructive</p>
+      <LinkButton variant="destructive">Remover</LinkButton>
+      <p>versão link default icon</p>
+      <LinkButton icon variant="default">
+        Mover para lista
+      </LinkButton>
+      <p>versão link default</p>
+      <LinkButton variant="default">
+        Mover para lista
+      </LinkButton>
     </div>
   );
 }
