@@ -23,4 +23,7 @@ export const constants = {
     semiBold: 600,
     regular: 400,
   },
+  radius: {
+    smallRadius: "8px",
+  },
 };
