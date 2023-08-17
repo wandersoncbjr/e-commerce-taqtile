@@ -44,7 +44,7 @@ function App() {
       </Button>
       <Button variant="secondary">Adicionar</Button>
       <p>versão link</p>
-      <Button variant="link">Adicionar</Button>
+      <Button icon variant="link">Adicionar</Button>
     </div>
   );
 }

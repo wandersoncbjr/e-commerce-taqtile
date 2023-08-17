@@ -28,7 +28,7 @@ const colorVariants = {
 };
 
 export const Container = styled.button<ButtonProps>`
-  width: ${(props) => (props.expanded ? "100%" : "auto")};
+  width: ${(props) => (props.expanded ? "100%" : "")};
   height: ${(props) =>
     props.compact
       ? constantsButton.defaultCompactHeight
