@@ -3,6 +3,7 @@ export const constants = {
     primary: "Source Sans Pro",
   },
   size: {
+    xxxLarge: "24px",
     xxLarge: "20px",
     xLarge: "18px",
     large: "16px",

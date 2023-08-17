@@ -1,40 +1,18 @@
 import React from "react";
 import * as S from "./styles";
-import iconLink from "./icon-link-button.svg";
-import { Separator } from "../separator";
-
+import { TypographyLink } from "../typography/typography-link";
 export interface ButtonProps {
-  variant: "primary" | "secondary" | "CTA" | "link";
+  variant: "primary" | "secondary" | "CTA";
   compact?: boolean;
-  icon?: boolean;
   children: React.ReactNode;
   expanded?: boolean;
   onClick?: () => void;
 }
 
-export function Button({
-  children,
-  expanded,
-  compact,
-  variant,
-  icon,
-}: ButtonProps) {
+export function Button({ children, expanded, compact, variant }: ButtonProps) {
   return (
-    <S.Container
-      expanded={expanded}
-      compact={compact}
-      variant={variant}
-      icon={icon}
-    >
-      {icon && (
-        <>
-          <span>
-            <img src={iconLink} alt="ícone com sinal de mais." />
-          </span>
-          <Separator size="small" />
-        </>
-      )}
-      {children}
+    <S.Container expanded={expanded} compact={compact} variant={variant}>
+      <TypographyLink>{children}</TypographyLink>
     </S.Container>
   );
 }

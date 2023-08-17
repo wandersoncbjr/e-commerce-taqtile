@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { constants } from "../../typography";
+import { constants } from "../typography";
 import { ButtonProps } from ".";
-import { colors } from "../../typography/colors";
+import { colors } from "../typography/colors";
 
 const constantsButton = {
   defaultCompactHeight: "32px",
@@ -21,10 +21,6 @@ const colorVariants = {
     background: colors.brandCta,
     text: colors.brandPrimary,
   },
-  link: {
-    background: colors.baseWhite,
-    text: colors.brandCtaDark,
-  },
 };
 
 export const Container = styled.button<ButtonProps>`
@@ -43,6 +39,6 @@ export const Container = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   border: none;
-  padding: 8px 16px;
+  padding: 12px 24px;
   cursor: pointer;
 `;
