@@ -7,16 +7,23 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   option: string[];
   label?: string;
   error?: string;
+  placeholder: string;
 }
 
-export function Select({ option, label, error, ...rest }: SelectProps) {
+export function Select({
+  option,
+  label,
+  error,
+  placeholder,
+  ...rest
+}: SelectProps) {
   return (
     <>
       <Label error={error}>{label}</Label>
       <Container>
         <SelectStyle name="select" {...rest}>
           <option value="" disabled selected>
-            Selecione...
+            {placeholder}
           </option>
           {option.map((option, index) => (
             <option key={index} value={option}>

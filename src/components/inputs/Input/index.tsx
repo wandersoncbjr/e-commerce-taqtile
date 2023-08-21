@@ -2,8 +2,9 @@ import { useState } from "react";
 import { useId } from "react";
 import { InputHTMLAttributes } from "react";
 import { Label, Container, InputStyle, Caption } from "./styles";
-import { Separator } from "../../separator/styles";
+import { SeparatorStyle } from "../../separator/styles";
 import iconPassword from "./icon-password.svg.svg";
+
 
 export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
@@ -26,7 +27,7 @@ export function Input({ label, type, error, ...rest }: InputProps) {
           {label}
         </Label>
       )}
-      <Separator size="small" />
+      <SeparatorStyle size="small" />
       <Container error={error}>
         <InputStyle
           type={isPasswordVisible ? "text" : type}
@@ -42,7 +43,7 @@ export function Input({ label, type, error, ...rest }: InputProps) {
           />
         ) : null}
       </Container>
-      <Separator size="small" />
+      <SeparatorStyle size="small" />
       {error && <Caption>{error}</Caption>}
     </>
   );
