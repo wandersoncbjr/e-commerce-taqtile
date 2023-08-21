@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import * as S from "./styles";
+import {LabelStyle} from "./styles";
 
 export interface LabelProps {
   children: ReactNode;
@@ -7,5 +7,5 @@ export interface LabelProps {
 }
 
 export function Label({ children, error }: LabelProps) {
-  return <S.LabelStyle error={error}>{children}</S.LabelStyle>;
+  return <LabelStyle error={error}>{children}</LabelStyle>;
 }
