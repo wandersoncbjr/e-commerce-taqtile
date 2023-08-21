@@ -1,5 +1,5 @@
 import { Container } from "../inputs/Input/styles";
-import { ButtoStyled, InputStyled } from "./style";
+import { ButtoStyled, ContainerStyled, InputStyled } from "./style";
 import iconAdding from "./icon-adding.svg";
 import { IconSubtracting } from "./icon-stepper-subtracting";
 import { ChangeEvent, useState } from "react";
@@ -27,13 +27,7 @@ export function Stepper() {
   return (
     <>
       <Container>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "100%",
-          }}
-        >
+        <ContainerStyled>
           <ButtoStyled onClick={handleDecrease}>
             <IconSubtracting
               color={
@@ -50,7 +44,7 @@ export function Stepper() {
           <ButtoStyled onClick={handleIncrease}>
             <img src={iconAdding} alt="adicionar" />
           </ButtoStyled>
-        </div>
+        </ContainerStyled>
       </Container>
     </>
   );

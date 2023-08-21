@@ -21,3 +21,9 @@ export const ButtoStyled = styled.button`
   justify-content: center;
   align-items: center;
 `;
+
+export const ContainerStyled = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+`;
