@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import * as S from "./styles";
+import { H2Style} from "./styles";
 
 interface H2Props {
   children: ReactNode;
 }
 
 export function H2({ children }: H2Props) {
-  return <S.H2>{children}</S.H2>;
+  return <H2Style>{children}</H2Style>;
 }

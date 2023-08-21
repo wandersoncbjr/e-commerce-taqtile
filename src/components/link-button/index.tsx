@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
-import { Separator } from "../separator";
+import { SeparatorStyle } from "../separator";
 import iconLink from "./icon-link-button.svg";
 import { TypographyButton } from "../typography/typography-link/styles";
-import * as S from "./styles";
+import { ContainerLink } from "./styles";
 
 export interface LinkButtonProps {
   children: ReactNode;
@@ -19,16 +19,16 @@ export function LinkButton({
   expanded,
 }: LinkButtonProps) {
   return (
-    <S.ContainerLink variant={variant} expanded={expanded}>
+    <ContainerLink variant={variant} expanded={expanded}>
       {icon && (
         <>
           <span>
-            <img src={iconLink} alt="ícone com sinal de mais." />
+            <img src={iconLink} alt="ícone com sinal de mai" />
           </span>
-          <Separator size="small" />
+          <SeparatorStyle size="small" />
         </>
       )}
       <TypographyButton>{children}</TypographyButton>
-    </S.ContainerLink>
+    </ContainerLink>
   );
 }

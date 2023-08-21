@@ -1,5 +1,5 @@
 import React from "react";
-import * as S from "./styles";
+import { Container } from "./styles";
 import { TypographyLink } from "../typography/typography-link";
 export interface ButtonProps {
   variant: "primary" | "secondary" | "CTA";
@@ -11,8 +11,8 @@ export interface ButtonProps {
 
 export function Button({ children, expanded, compact, variant }: ButtonProps) {
   return (
-    <S.Container expanded={expanded} compact={compact} variant={variant}>
+    <Container expanded={expanded} compact={compact} variant={variant}>
       <TypographyLink>{children}</TypographyLink>
-    </S.Container>
+    </Container>
   );
 }

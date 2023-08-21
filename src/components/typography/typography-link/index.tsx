@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
-import * as S from "./styles";
+import {TypographyButton} from "./styles";
 
 interface ButtonsLinksProps {
   children: ReactNode;
 }
 
 export function TypographyLink({ children }: ButtonsLinksProps) {
-  return <S.TypographyButton>{children}</S.TypographyButton>;
+  return <TypographyButton>{children}</TypographyButton>;
 }
