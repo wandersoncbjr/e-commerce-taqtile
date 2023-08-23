@@ -24,7 +24,6 @@ export const colors = {
   statesErrorLight: "#CB31351A",
   statesErrorDark: "#7A1D20",
   secondaryVanilla: "#FFE4BE",
-  boxShadow: "rgba(55, 84, 102, 0.15)",
   brandPrimaryGradient:
     "linear-gradient(#F9F9F9, #F9F9F9),radial-gradient(circle at top left,  rgba(11, 70, 135, 1), rgba(0, 121, 188, 1))",
 };

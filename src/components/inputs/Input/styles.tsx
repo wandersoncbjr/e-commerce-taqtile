@@ -22,7 +22,6 @@ export const Label = styled.label<LabelAndContainerProps>`
 `;
 
 export const Container = styled.div<LabelAndContainerProps>`
-  width: 100%;
   display: flex;
   padding: 12px 12px;
   background-color: ${colors.baseBackground};

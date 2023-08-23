@@ -1,7 +1,6 @@
 export const constants = {
   font: {
     primary: "Source Sans Pro",
-    secondary: "Segoe UI",
   },
   size: {
     xxxLarge: "24px",
