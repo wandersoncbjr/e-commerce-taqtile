@@ -4,17 +4,37 @@ import { constants } from "../typography";
 
 export const ContainerStyled = styled.div`
   border-radius: ${constants.radius.smallRadius};
+  background-color: ${colors.baseWhite};
+  padding: 16px;
+  gap: px;
+  box-shadow: 0px 2px 8px 0px ${colors.boxShadow};
   display: flex;
   flex-direction: column;
-  width: 214.4px;
-  cursor: pointer;
-  background-color: ${colors.baseWhite};
-  background-color: aqua;
-  padding: 16px;
+
 `;
 
 export const ContainerButtonStyled = styled.div`
   display: flex;
+  align-items: center;
   gap: 8px;
-  width: 100%;
+
+  @media (max-width: 768px) {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+`;
+
+export const ContainerImgStyled = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const WrapperButtonStyled = styled.div`
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
