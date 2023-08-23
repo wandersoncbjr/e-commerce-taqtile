@@ -6,15 +6,13 @@ export const ContainerStyled = styled.div`
   border-radius: ${constants.radius.smallRadius};
   background-color: ${colors.baseWhite};
   padding: 16px;
-  gap: px;
   box-shadow: 0px 2px 8px 0px ${colors.boxShadow};
   display: flex;
   flex-direction: column;
 
 `;
 
-export const ContainerButtonStyled = styled.div`
-  display: flex;
+  export const ContainerButtonStyled = styled.div`  display: flex;
   align-items: center;
   gap: 8px;
 
