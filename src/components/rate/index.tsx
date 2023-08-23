@@ -8,5 +8,12 @@ interface RatingProps {
 }
 
 export function Rating({ defaultValue = 0, onChange }: RatingProps) {
-  return <Rate defaultValue={defaultValue} onChange={onChange}  />;
+  return (
+    <Rate
+      size="xs"
+      style={{ width: "6rem" }}
+      defaultValue={defaultValue}
+      onChange={onChange}
+    />
+  );
 }
