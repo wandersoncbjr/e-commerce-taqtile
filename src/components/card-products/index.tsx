@@ -6,7 +6,6 @@ import {
   ContainerImgStyled,
   WrapperButtonStyled,
 } from "./styled";
-import imageProducts from "./Image-products.svg";
 import { Desktop } from "../typography/desktop/desktop";
 import { BodySecondary } from "../typography/body-secondary/body-secondary";
 import { Price } from "../typography/price/price";
@@ -24,6 +23,7 @@ interface CardProductsProps {
 }
 
 export function CardProducts({
+  img,
   title,
   caption,
   price,
@@ -41,7 +41,7 @@ export function CardProducts({
       <ContainerStyled>
         <div onClick={warnings} style={{ cursor: "pointer" }}>
           <ContainerImgStyled>
-            <img src={imageProducts} alt="Foto do produto" />
+            <img src={img} alt="Foto do produto" />
           </ContainerImgStyled>
           <Desktop>{title}</Desktop>
           <BodySecondary>{caption}</BodySecondary>
