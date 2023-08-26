@@ -14,7 +14,7 @@ export const InputStyled = styled.input.attrs({
   outline: none;
 `;
 
-export const ButtoStyled = styled.button`
+export const ButtonStyled = styled.button`
   background-color: transparent;
   cursor: pointer;
   display: flex;

@@ -1,9 +1,9 @@
 import { Container } from "../inputs/Input/styles";
-import { ButtoStyled, ContainerStyled, InputStyled } from "./style";
-import iconAdding from "./icon-adding.svg";
-import { IconSubtracting } from "./icon-stepper-subtracting";
+import { ButtonStyled, ContainerStyled, InputStyled } from "./style";
+import { IconSubtracting } from "../../assets/icons/icon-stepper-subtracting";
 import { ChangeEvent, useState } from "react";
 import { colors } from "../typography/colors";
+import { IconAdding } from "../../assets/icons/icon-adding";
 
 export function Stepper() {
   const [valueButton, SetvalueButton] = useState("0");
@@ -25,27 +25,25 @@ export function Stepper() {
   }
 
   return (
-    <>
-      <Container>
-        <ContainerStyled>
-          <ButtoStyled onClick={handleDecrease}>
-            <IconSubtracting
-              color={
-                valueButton === "0" ? colors.baseGrayLight : colors.brandPrimary
-              }
-            />
-          </ButtoStyled>
-          <InputStyled
-            value={valueButton}
-            onChange={handleChange}
-            type="number"
-            min="0"
+    <Container>
+      <ContainerStyled>
+        <ButtonStyled onClick={handleDecrease}>
+          <IconSubtracting
+            color={
+              valueButton === "0" ? colors.baseGrayLight : colors.brandPrimary
+            }
           />
-          <ButtoStyled onClick={handleIncrease}>
-            <img src={iconAdding} alt="adicionar" />
-          </ButtoStyled>
-        </ContainerStyled>
-      </Container>
-    </>
+        </ButtonStyled>
+        <InputStyled
+          value={valueButton}
+          onChange={handleChange}
+          type="number"
+          min="0"
+        />
+        <ButtonStyled onClick={handleIncrease}>
+          <IconAdding />
+        </ButtonStyled>
+      </ContainerStyled>
+    </Container>
   );
 }
