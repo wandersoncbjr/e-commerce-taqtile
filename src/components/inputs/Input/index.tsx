@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useId } from "react";
 import { InputHTMLAttributes } from "react";
-import { Label, Container, InputStyle, Caption } from "./styles";
+import { Label, InputContainerStyled, InputStyle, Caption } from "./styles";
 import { SeparatorStyle } from "../../separator/styles";
 import { IconPassword } from "../../../assets/icons/icon-password";
 
@@ -27,7 +27,7 @@ export function Input({ label, type, error, ...rest }: InputProps) {
         </Label>
       )}
       <SeparatorStyle size="small" />
-      <Container error={error}>
+      <InputContainerStyled error={error}>
         <InputStyle
           type={isPasswordVisible ? "text" : type}
           {...rest}
@@ -36,7 +36,7 @@ export function Input({ label, type, error, ...rest }: InputProps) {
         {type === "password" ? (
           <IconPassword onClick={togglePasswordVisibility} />
         ) : null}
-      </Container>
+      </InputContainerStyled>
       <SeparatorStyle size="small" />
       {error && <Caption>{error}</Caption>}
     </>

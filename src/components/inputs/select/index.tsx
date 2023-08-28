@@ -1,6 +1,6 @@
 import { SelectHTMLAttributes } from "react";
 import { Separator } from "../../separator";
-import { Caption, Container, Label } from "../Input/styles";
+import { Caption, InputContainerStyled, Label } from "../Input/styles";
 import { SelectStyle } from "./style";
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
@@ -20,7 +20,7 @@ export function Select({
   return (
     <>
       <Label error={error}>{label}</Label>
-      <Container>
+      <InputContainerStyled>
         <SelectStyle name="select" {...rest}>
           <option value="" disabled selected>
             {placeholder}
@@ -32,7 +32,7 @@ export function Select({
           ))}
           +
         </SelectStyle>
-      </Container>
+      </InputContainerStyled>
       <Separator size="small" />
       {error && <Caption>{error}</Caption>}
     </>

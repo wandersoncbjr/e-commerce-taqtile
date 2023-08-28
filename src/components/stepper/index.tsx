@@ -1,5 +1,5 @@
-import { Container } from "../inputs/Input/styles";
-import { ButtonStyled, ContainerStyled, InputStyled } from "./style";
+import { InputContainerStyled } from "../inputs/Input/styles";
+import { ButtonStyled, InputStyled } from "./style";
 import { IconSubtracting } from "../../assets/icons/icon-stepper-subtracting";
 import { ChangeEvent, useState } from "react";
 import { colors } from "../typography/colors";
@@ -25,25 +25,23 @@ export function Stepper() {
   }
 
   return (
-    <Container>
-      <ContainerStyled>
-        <ButtonStyled onClick={handleDecrease}>
-          <IconSubtracting
-            color={
-              valueButton === "0" ? colors.baseGrayLight : colors.brandPrimary
-            }
-          />
-        </ButtonStyled>
-        <InputStyled
-          value={valueButton}
-          onChange={handleChange}
-          type="number"
-          min="0"
+    <InputContainerStyled>
+      <ButtonStyled onClick={handleDecrease}>
+        <IconSubtracting
+          color={
+            valueButton === "0" ? colors.baseGrayLight : colors.brandPrimary
+          }
         />
-        <ButtonStyled onClick={handleIncrease}>
-          <IconAdding />
-        </ButtonStyled>
-      </ContainerStyled>
-    </Container>
+      </ButtonStyled>
+      <InputStyled
+        value={valueButton}
+        onChange={handleChange}
+        type="number"
+        min="0"
+      />
+      <ButtonStyled onClick={handleIncrease}>
+        <IconAdding />
+      </ButtonStyled>
+    </InputContainerStyled>
   );
 }
