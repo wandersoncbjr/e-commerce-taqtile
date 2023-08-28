@@ -21,7 +21,7 @@ export const Label = styled.label<LabelAndContainerProps>`
   line-height: ${constants.lineHeight.xLarge};
 `;
 
-export const Container = styled.div<LabelAndContainerProps>`
+export const InputContainerStyled = styled.div<LabelAndContainerProps>`
   display: flex;
   padding: 12px 12px;
   background-color: ${colors.baseBackground};
