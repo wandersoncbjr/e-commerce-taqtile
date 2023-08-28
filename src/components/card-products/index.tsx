@@ -1,7 +1,7 @@
 import { Button } from "../button";
 import { Stepper } from "../stepper";
 import {
-  ContainerStyled,
+  CardProductsContainerStyled,
   ContainerButtonStyled,
   ContainerImgStyled,
   WrapperButtonStyled,
@@ -37,36 +37,34 @@ export function CardProducts({
   };
 
   return (
-    <>
-      <ContainerStyled>
-        <div onClick={warnings} style={{ cursor: "pointer" }}>
-          <ContainerImgStyled>
-            <img src={img} alt="Foto do produto" />
-          </ContainerImgStyled>
-          <Desktop>{title}</Desktop>
-          <BodySecondary>{caption}</BodySecondary>
-        </div>
-        <Separator size={"small"} />
-        <Rating />
-        {promotion ? (
-          <BodySecondary style={{ marginTop: "5px" }} scratched>
-            {promotion}
-          </BodySecondary>
-        ) : (
-          <Separator size={"medium"} />
-        )}
-        <Price>{formattedPrice} ️</Price>
-        <BodySecondary>{Installment} </BodySecondary>
-        <Separator size={"small"} />
-        <ContainerButtonStyled>
-          <Stepper />
-          <WrapperButtonStyled>
-            <Button expanded variant={"primary"}>
-              Adicionar
-            </Button>
-          </WrapperButtonStyled>
-        </ContainerButtonStyled>
-      </ContainerStyled>
-    </>
+    <CardProductsContainerStyled>
+      <div onClick={warnings} style={{ cursor: "pointer" }}>
+        <ContainerImgStyled>
+          <img src={img} alt="Foto do produto" />
+        </ContainerImgStyled>
+        <Desktop>{title}</Desktop>
+        <BodySecondary>{caption}</BodySecondary>
+      </div>
+      <Separator size={"small"} />
+      <Rating />
+      {promotion ? (
+        <BodySecondary style={{ marginTop: "5px" }} scratched>
+          {promotion}
+        </BodySecondary>
+      ) : (
+        <Separator size={"medium"} />
+      )}
+      <Price>{formattedPrice} ️</Price>
+      <BodySecondary>{Installment} </BodySecondary>
+      <Separator size={"small"} />
+      <ContainerButtonStyled>
+        <Stepper />
+        <WrapperButtonStyled>
+          <Button expanded variant={"primary"}>
+            Adicionar
+          </Button>
+        </WrapperButtonStyled>
+      </ContainerButtonStyled>
+    </CardProductsContainerStyled>
   );
 }
