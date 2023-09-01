@@ -31,21 +31,19 @@ const cardData = [
 
 export function CarouselCard() {
   return (
-    <>
-      <Carousel type="card">
-        {cardData.map((items, index) => (
-          <ContainerItemCarousel key={index}>
-            <CardProducts
-              Installment={items.Installment}
-              caption={items.caption}
-              img={items.img}
-              price={items.price}
-              title={items.title}
-              promotion={items.promotion}
-            />
-          </ContainerItemCarousel>
-        ))}
-      </Carousel>
-    </>
+    <Carousel type="card">
+      {cardData.map((items, index) => (
+        <ContainerItemCarousel key={index}>
+          <CardProducts
+            Installment={items.Installment}
+            caption={items.caption}
+            img={items.img}
+            price={items.price}
+            title={items.title}
+            promotion={items.promotion}
+          />
+        </ContainerItemCarousel>
+      ))}
+    </Carousel>
   );
 }
