@@ -1,11 +1,13 @@
 import React from "react";
-import { Carousell } from "./components/carousel/carousel";
+import { CarouselBanner } from "./components/carousel/carousel-banner";
+import { CarouselCard } from "./components/carousel/carousel-card";
 
 function App() {
   return (
-    <div>
-      <Carousell />
-    </div>
+    <>
+      <CarouselBanner />
+      <CarouselCard />
+    </>
   );
 }
 
