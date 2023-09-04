@@ -11,7 +11,8 @@ import { Price } from "../typography/price/price";
 import { Separator } from "../separator";
 import { Rating } from "../rate";
 import { formatPrice } from "../../price-formatter";
-import { H3 } from "../typography/headline/h3/desktop";
+import { H4 } from "../typography/headline/h4/h4";
+
 
 interface CardProductsProps {
   img: string;
@@ -42,7 +43,7 @@ export function CardProducts({
         <ContainerImgStyled>
           <img src={img} alt="Foto do produto" />
         </ContainerImgStyled>
-        <H3>{title}</H3>
+        <H4>{title}</H4>
         <BodySecondary>{caption}</BodySecondary>
       </div>
       <Separator size={"small"} />
