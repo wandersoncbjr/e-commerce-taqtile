@@ -1,8 +1,9 @@
 import { styled } from "styled-components";
-import { constants } from "..";
-import { colors } from "../colors";
+import { colors } from "../../colors";
+import { constants } from "../..";
 
-export const Desktop = styled.h4`
+
+export const H3 = styled.h4`
 color: ${colors.baseGrayDark};
   font-family: ${constants.font.primary};
   font-size: ${constants.size.large};

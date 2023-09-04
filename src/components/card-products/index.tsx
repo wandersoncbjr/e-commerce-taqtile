@@ -6,12 +6,12 @@ import {
   ContainerImgStyled,
   WrapperButtonStyled,
 } from "./styled";
-import { Desktop } from "../typography/desktop/desktop";
 import { BodySecondary } from "../typography/body-secondary/body-secondary";
 import { Price } from "../typography/price/price";
 import { Separator } from "../separator";
 import { Rating } from "../rate";
 import { formatPrice } from "../../price-formatter";
+import { H3 } from "../typography/headline/h3/desktop";
 
 interface CardProductsProps {
   img: string;
@@ -42,7 +42,7 @@ export function CardProducts({
         <ContainerImgStyled>
           <img src={img} alt="Foto do produto" />
         </ContainerImgStyled>
-        <Desktop>{title}</Desktop>
+        <H3>{title}</H3>
         <BodySecondary>{caption}</BodySecondary>
       </div>
       <Separator size={"small"} />
