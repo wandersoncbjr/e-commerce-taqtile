@@ -28,11 +28,18 @@ export const ContainerImgStyled = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
 `;
 
-export const WrapperButtonStyled = styled.div`
-  width: 50%;
-  @media (max-width: 768px) {
-    width: 100%;
+export const ContainerImgBannerStyled = styled(ContainerImgStyled)`
+  img {
+    object-fit: cover;
+
+    padding: 12px;
+    border-radius: 24px;
   }
 `;

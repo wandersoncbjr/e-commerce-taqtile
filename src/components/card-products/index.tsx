@@ -4,7 +4,6 @@ import {
   CardProductsContainerStyled,
   ContainerButtonStyled,
   ContainerImgStyled,
-  WrapperButtonStyled,
 } from "./styled";
 import { BodySecondary } from "../typography/body-secondary/body-secondary";
 import { Price } from "../typography/price/price";
@@ -60,11 +59,9 @@ export function CardProducts({
       <Separator size={"small"} />
       <ContainerButtonStyled>
         <Stepper />
-        <WrapperButtonStyled>
-          <Button expanded variant={"primary"}>
-            Adicionar
-          </Button>
-        </WrapperButtonStyled>
+        <Button expanded variant={"primary"}>
+          Adicionar
+        </Button>
       </ContainerButtonStyled>
     </CardProductsContainerStyled>
   );
