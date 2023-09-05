@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 import { useId } from "react";
 import { InputHTMLAttributes } from "react";
-import { Label, InputContainerStyled, InputStyle, Caption } from "./styles";
+import {
+  Label,
+  InputContainerStyled,
+  InputStyle,
+  Caption,
+  WrapperInputStyled,
+} from "./styles";
 import { SeparatorStyle } from "../../separator/styles";
 import { IconPassword } from "../../../assets/icons/icon-password";
 
@@ -9,9 +15,18 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
   error?: string;
   type?: string;
+  icon?: ReactNode;
+  expanded?: boolean;
 }
 
-export function Input({ label, type, error, ...rest }: InputProps) {
+export function Input({
+  label,
+  type,
+  error,
+  icon,
+  expanded,
+  ...rest
+}: InputProps) {
   const labelId = useId();
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
@@ -20,7 +35,7 @@ export function Input({ label, type, error, ...rest }: InputProps) {
   };
 
   return (
-    <>
+    <WrapperInputStyled expanded={expanded}>
       {label && (
         <Label error={error} htmlFor={labelId}>
           {label}
@@ -36,9 +51,10 @@ export function Input({ label, type, error, ...rest }: InputProps) {
         {type === "password" ? (
           <IconPassword onClick={togglePasswordVisibility} />
         ) : null}
+        {icon && icon}
       </InputContainerStyled>
       <SeparatorStyle size="small" />
       {error && <Caption>{error}</Caption>}
-    </>
+    </WrapperInputStyled>
   );
 }

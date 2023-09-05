@@ -21,8 +21,15 @@ export const Label = styled.label<LabelAndContainerProps>`
   line-height: ${constants.lineHeight.xLarge};
 `;
 
+type WrapperInputStyledProps = {
+  expanded?: boolean;
+};
+
+export const WrapperInputStyled = styled.div<WrapperInputStyledProps>`
+  width: ${({ expanded }) => (expanded ? "100%" : "")};
+`;
+
 export const InputContainerStyled = styled.div<LabelAndContainerProps>`
-  width: 100%;
   display: flex;
   padding: 12px 12px;
   background-color: ${colors.baseBackground};
