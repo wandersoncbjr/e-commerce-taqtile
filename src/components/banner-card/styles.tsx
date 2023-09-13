@@ -4,7 +4,7 @@ import { BannerCardProps } from "./banner-card";
 import { colors } from "../typography/colors";
 
 export const ContainerBannerCardStyled = styled.div`
-  width: 176px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -25,4 +25,12 @@ export const BoxColorStyled = styled.div<BoxColorStyledProps>`
   bottom: 0;
   position: absolute;
   background-color: ${({ color }) => colors[color]};
+`;
+
+export const ContainerTextCardStyled = styled.div`
+  width: 176px;
+  text-align: center;
+  h4 {
+    margin-top: 10px;
+  }
 `;
