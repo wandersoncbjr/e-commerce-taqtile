@@ -60,7 +60,11 @@ export function Header({ user }: HeaderProps) {
           <Input
             type="text"
             icon={<IconSearch />}
-            placeholder="Digite o que você procura"
+            placeholder={
+              user
+                ? `${user}, digite o que você procura`
+                : "Digite o que você procura"
+            }
             expanded
             onBlur={() => setShowInput(false)}
           />
