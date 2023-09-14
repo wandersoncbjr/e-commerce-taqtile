@@ -17,7 +17,11 @@ import {
 } from "./styles";
 import { useState } from "react";
 
-export function Header() {
+interface HeaderProps {
+  user: string;
+}
+
+export function Header({ user }: HeaderProps) {
   const [showInput, setShowInput] = useState(false);
 
   return (
@@ -31,7 +35,11 @@ export function Header() {
           <Input
             type="text"
             icon={<IconSearch />}
-            placeholder="Digite o que você procura"
+            placeholder={
+              user
+                ? `${user}, digite o que você procura`
+                : "Digite o que você procura"
+            }
             expanded
           />
         </ContainerInputSearchStyled>
