@@ -9,6 +9,7 @@ export const ContainerBannerCardStyled = styled.div`
   flex-direction: column;
   position: relative;
   align-items: center;
+  margin-bottom: 10px;
 
   img {
     object-fit: cover;
@@ -30,7 +31,4 @@ export const BoxColorStyled = styled.div<BoxColorStyledProps>`
 export const ContainerTextCardStyled = styled.div`
   width: 176px;
   text-align: center;
-  h4 {
-    margin-top: 10px;
-  }
 `;
