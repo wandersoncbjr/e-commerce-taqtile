@@ -19,14 +19,7 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   expanded?: boolean;
 }
 
-export function Input({
-  label,
-  type,
-  error,
-  icon,
-  expanded,
-  ...rest
-}: InputProps) {
+export function Input({ label, type, error, icon, ...rest }: InputProps) {
   const labelId = useId();
   const [isPasswordVisible, setPasswordVisible] = useState(false);
 
@@ -51,7 +44,7 @@ export function Input({
         {type === "password" ? (
           <IconPassword onClick={togglePasswordVisibility} />
         ) : null}
-        {icon && icon}
+        {icon}
       </InputContainerStyled>
       <SeparatorStyle size="small" />
       {error && <Caption>{error}</Caption>}

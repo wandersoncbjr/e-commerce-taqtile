@@ -26,7 +26,7 @@ type WrapperInputStyledProps = {
 };
 
 export const WrapperInputStyled = styled.div<WrapperInputStyledProps>`
-  width: ${({ expanded }) => (expanded ? "100%" : "")};
+  width: 100%;
 `;
 
 export const InputContainerStyled = styled.div<LabelAndContainerProps>`

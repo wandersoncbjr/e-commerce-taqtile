@@ -18,7 +18,7 @@ import {
 import { useState } from "react";
 
 interface HeaderProps {
-  user: string;
+  user?: string;
 }
 
 export function Header({ user }: HeaderProps) {
