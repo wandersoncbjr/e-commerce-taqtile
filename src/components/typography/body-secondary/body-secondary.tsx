@@ -4,6 +4,7 @@ import { colors } from "../colors";
 
 interface BodySecondaryProps {
   scratched?: boolean;
+  color?: "brandCtaDark" | "baseGray";
 }
 export const BodySecondary = styled.p<BodySecondaryProps>`
   text-decoration: ${({ scratched }) => (scratched ? "line-through" : "")};
@@ -11,5 +12,6 @@ export const BodySecondary = styled.p<BodySecondaryProps>`
   font-size: ${constants.size.small};
   font-weight: ${constants.weight.regular};
   line-height: ${constants.lineHeight.large};
-  color: ${colors.baseGray};
+  color: ${({ color }) =>
+    color === "brandCtaDark" ? colors.brandCtaDark : colors.baseGray};
 `;
