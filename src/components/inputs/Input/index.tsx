@@ -28,7 +28,7 @@ export function Input({ label, type, error, icon, ...rest }: InputProps) {
   };
 
   return (
-    <WrapperInputStyled expanded={expanded}>
+    <WrapperInputStyled>
       {label && (
         <Label error={error} htmlFor={labelId}>
           {label}
