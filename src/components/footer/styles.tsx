@@ -4,13 +4,27 @@ import { colors } from "../typography/colors";
 export const ContainerSectionSocialMediaStyled = styled.section`
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
+  margin-bottom: 4px;
+  @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 export const ContainerSectionDownloadStyled = styled.section`
   display: flex;
   flex-direction: column;
   gap: 14px;
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+  }
+`;
+
+export const SectionSocialMediaStyled = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 `;
 
 export const WapperImagesStoreStylde = styled.section`
@@ -23,9 +37,21 @@ export const ContainerSectionServiceStyled = styled.section`
   width: 125px;
 `;
 
+export const SectionServiceStyled = styled.section`
+  @media (max-width: 768px) {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: center;
+  }
+`;
+
 export const FooterStyled = styled.footer`
-  padding-inline: 64px;
+  padding: 32px;
   background-color: ${colors.baseBackground};
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 export const ContainerFooterStyled = styled.footer`
@@ -36,6 +62,8 @@ export const ContainerFooterStyled = styled.footer`
   gap: 32px;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
+    padding: 0;
+    margin-top: 30px;
   }
 `;
 

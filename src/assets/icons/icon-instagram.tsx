@@ -2,8 +2,8 @@ export function IconInstagram() {
   return (
     <svg
       fill="#0B4687"
-      width="33"
-      height="33"
+      width="31"
+      height="31"
       id="Layer_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"

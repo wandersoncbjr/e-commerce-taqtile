@@ -9,11 +9,14 @@ import { IconTiktok } from "../../assets/icons/icon-tiktok";
 import { IconTwitter } from "../../assets/icons/icon-twitter";
 import { IconYoutube } from "../../assets/icons/icon-youtube";
 import { H3 } from "../typography/headline/h3/h3";
-import { ContainerSectionSocialMediaStyled } from "./styles";
+import {
+  ContainerSectionSocialMediaStyled,
+  SectionSocialMediaStyled,
+} from "./styles";
 
 export function SectionSocialMedia() {
   return (
-    <div>
+    <SectionSocialMediaStyled>
       <H3>Nossas redes</H3>
       <div>
         <ContainerSectionSocialMediaStyled>
@@ -31,6 +34,6 @@ export function SectionSocialMedia() {
           <IconGoogleBusiness />
         </ContainerSectionSocialMediaStyled>
       </div>
-    </div>
+    </SectionSocialMediaStyled>
   );
 }

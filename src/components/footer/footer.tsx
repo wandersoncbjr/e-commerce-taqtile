@@ -14,7 +14,9 @@ export function Footer() {
   return (
     <FooterStyled>
       <ContainerFooterStyled>
-        <img src={Logo} alt={"Logomarca dental Cremer"} />
+        <div>
+          <img src={Logo} alt={"Logomarca dental Cremer"} />
+        </div>
         <WapperFooterStyled>
           <SectionTextFooter
             title="Institucional"
