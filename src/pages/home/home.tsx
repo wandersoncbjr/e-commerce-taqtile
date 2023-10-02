@@ -4,6 +4,7 @@ import { Header } from "../../components/header/header";
 import { SectionBannerCard } from "../../components/section-banner-card/section-banner-card";
 import { SectionCardInformation } from "../../components/section-card-news/section-card-news";
 import { SectionCardsProducts } from "../../components/section-cards/section-card";
+import { Separator } from "../../components/separator";
 import { ContainerHomeStyled } from "./styles";
 
 const data = {
@@ -125,6 +126,7 @@ export function Home() {
   return (
     <div>
       <Header />
+      <Separator size="medium" />
       <CarouselBanner imagesBanner={data.imagesBanner}></CarouselBanner>
       <ContainerHomeStyled>
         <SectionBannerCard bannerData={data.banners} />
@@ -148,7 +150,7 @@ export function Home() {
       <ContainerHomeStyled>
         <SectionCardInformation informartion={data.information} />
       </ContainerHomeStyled>
-
+      <Separator size="medium" />
       <Footer />
     </div>
   );
