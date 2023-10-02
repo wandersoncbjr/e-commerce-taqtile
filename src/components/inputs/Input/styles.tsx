@@ -30,8 +30,12 @@ export const WrapperInputStyled = styled.div<WrapperInputStyledProps>`
 `;
 
 export const InputContainerStyled = styled.div<LabelAndContainerProps>`
+  height: 40px;
   display: flex;
   padding: 12px 12px;
+  width: 100%;
+
+  align-items: center;
   background-color: ${colors.baseBackground};
   border: ${({ error }) =>
     error
@@ -44,6 +48,9 @@ export const InputContainerStyled = styled.div<LabelAndContainerProps>`
     background-image: ${colors.brandPrimaryGradient};
     background-origin: border-box;
     background-clip: padding-box, border-box;
+  }
+  button {
+    width: 60px;
   }
 `;
 

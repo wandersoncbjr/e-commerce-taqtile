@@ -31,6 +31,9 @@ export const WapperImagesStoreStylde = styled.section`
   display: flex;
   gap: 8px;
   cursor: pointer;
+  img {
+    width: 100%;
+  }
 `;
 
 export const ContainerSectionServiceStyled = styled.section`

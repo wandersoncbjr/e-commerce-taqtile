@@ -4,6 +4,7 @@ import {
   CardProductsContainerStyled,
   ContainerButtonStyled,
   ContainerImgStyled,
+  WrapperButtonStyled,
 } from "./styled";
 import { BodySecondary } from "../typography/body-secondary/body-secondary";
 import { Price } from "../typography/price/price";
@@ -11,7 +12,6 @@ import { Separator } from "../separator";
 import { Rating } from "../rate";
 import { formatPrice } from "../../price-formatter";
 import { H4 } from "../typography/headline/h4/h4";
-
 
 interface CardProductsProps {
   img: string;
@@ -58,10 +58,14 @@ export function CardProducts({
       <BodySecondary>{Installment} </BodySecondary>
       <Separator size={"small"} />
       <ContainerButtonStyled>
-        <Stepper />
-        <Button expanded variant={"primary"}>
-          Adicionar
-        </Button>
+        <WrapperButtonStyled>
+          <Stepper />
+        </WrapperButtonStyled>
+        <WrapperButtonStyled>
+          <Button expanded variant={"primary"}>
+            Adicionar
+          </Button>
+        </WrapperButtonStyled>
       </ContainerButtonStyled>
     </CardProductsContainerStyled>
   );

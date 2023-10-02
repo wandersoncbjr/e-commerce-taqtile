@@ -7,10 +7,10 @@ export const ContainerLink = styled.button<LinkButtonProps>`
     props.variant === "destructive" ? colors.statesError : colors.brandCtaDark};
   width: ${(props) => (props.expanded ? "100%" : "")};
   display: flex;
-  align-items: center;
-  justify-content: center;
   border: none;
   background: none;
   cursor: pointer;
-  padding: 8px 16px;
+  :hover {
+    text-decoration: underline;
+  }
 `;

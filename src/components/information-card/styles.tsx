@@ -9,14 +9,15 @@ export const WapperTextCardInformationStyles = styled.div`
 `;
 
 export const ContainerCardInformationStyles = styled.div`
-  margin-top: 40px;
   border-radius: 12px;
   background-color: ${colors.baseWhite};
   height: 324px;
   width: 272px;
   overflow: auto;
   box-shadow: 0px 2px 8px 0px rgba(55, 84, 102, 0.15);
-
+  @media (max-width: 768px) {
+    width: 90%;
+  }
   img {
     object-fit: cover;
     width: 100%;

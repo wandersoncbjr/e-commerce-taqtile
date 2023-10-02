@@ -9,18 +9,31 @@ export const CardProductsContainerStyled = styled.div`
   box-shadow: 0px 2px 8px 0px ${colors.boxShadow};
   display: flex;
   flex-direction: column;
+  width: 214px;
+  margin: 16px;
+
+  @media (max-width: 768px) {
+    width: 260px;
+  }
 `;
 
 export const ContainerButtonStyled = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-
+  width: 100%;
   @media (max-width: 768px) {
     display: block;
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+`;
+
+export const WrapperButtonStyled = styled.div`
+  width: 50%;
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -30,16 +43,21 @@ export const ContainerImgStyled = styled.div`
   justify-content: center;
   img {
     object-fit: cover;
-    width: 100%;
-    height: 100%;
+    width: 120px;
+    height: 120px;
   }
 `;
 
 export const ContainerImgBannerStyled = styled(ContainerImgStyled)`
+  margin: 20px 0 20px 0px;
   img {
     object-fit: cover;
-
-    padding: 12px;
     border-radius: 24px;
+    width: 85%;
+    height: 145px;
+
+    @media (min-width: 768px) {
+      height: 100%;
+    }
   }
 `;
