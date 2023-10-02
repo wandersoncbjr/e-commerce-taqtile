@@ -14,7 +14,7 @@ export function Carousel({ children, type, showDots }: CarouselProps) {
   const responsive = {
     mobile: {
       breakpoint: { max: 464, min: 0 },
-      items: type === "card" ? 1.6 : 1,
+      items: type === "card" ? 1.5 : 1,
     },
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
@@ -35,6 +35,7 @@ export function Carousel({ children, type, showDots }: CarouselProps) {
       <CarouselSlider
         additionalTransfrom={0}
         arrows={false}
+        infinite
         autoPlaySpeed={3000}
         draggable
         focusOnSelect={false}

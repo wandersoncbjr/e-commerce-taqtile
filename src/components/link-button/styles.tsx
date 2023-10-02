@@ -8,6 +8,7 @@ export const ContainerLink = styled.button<LinkButtonProps>`
   width: ${(props) => (props.expanded ? "100%" : "")};
   display: flex;
   border: none;
+  gap: 4px;
   background: none;
   cursor: pointer;
   :hover {
