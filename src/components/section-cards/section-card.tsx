@@ -18,6 +18,7 @@ export interface SectionCardsProductsProps {
     price: number;
     title: string;
     promotion?: string;
+    quantityStars: number;
   }[];
 }
 
@@ -36,6 +37,7 @@ export function SectionCardsProducts({
         <SectionCardWrapperStyled>
           {cardsToRender?.map((item, index) => (
             <CardProducts
+              quantityStars={item.quantityStars}
               key={index}
               Installment={item.Installment}
               caption={item.caption}
@@ -50,6 +52,7 @@ export function SectionCardsProducts({
         <Carousel showDots type="card">
           {cardsToRender?.map((item, index) => (
             <CardProducts
+              quantityStars={item.quantityStars}
               key={index}
               Installment={item.Installment}
               caption={item.caption}

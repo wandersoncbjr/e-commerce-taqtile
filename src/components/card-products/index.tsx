@@ -20,6 +20,7 @@ interface CardProductsProps {
   price: number;
   Installment: string;
   promotion?: string;
+  quantityStars: number
 }
 
 export function CardProducts({
@@ -29,6 +30,7 @@ export function CardProducts({
   price,
   Installment,
   promotion,
+  quantityStars
 }: CardProductsProps) {
   const formattedPrice = formatPrice(price);
 
@@ -46,7 +48,7 @@ export function CardProducts({
         <BodySecondary>{caption}</BodySecondary>
       </div>
       <Separator size={"small"} />
-      <Rating />
+      <Rating value={quantityStars} />
       {promotion ? (
         <BodySecondary style={{ marginTop: "5px" }} scratched>
           {promotion}
