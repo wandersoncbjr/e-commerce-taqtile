@@ -1,4 +1,4 @@
-import { ReactNode, useRef, useState } from "react";
+import { ReactNode, useState } from "react";
 import { ContainerItemStyled } from "./styles";
 import { TypographyButton } from "../typography/typography-link/styles";
 import { ModalLogin } from "../login/modal-login";
