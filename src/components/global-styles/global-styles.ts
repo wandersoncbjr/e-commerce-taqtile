@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { colors } from "../typography/colors";
 
 export const GlobalStyle = createGlobalStyle`
 * {
@@ -7,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
   border: 0;
 }
 
+ body {
+    background-color: ${colors.baseBackground}; 
+  }
+  
 menu, ol, ul {
   list-style: none;
 }
