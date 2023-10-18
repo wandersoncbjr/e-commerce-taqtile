@@ -1,9 +1,9 @@
 import { IconCart } from "../../assets/icons/icon-cart";
 import { IconLogo } from "../../assets/icons/icon-logo";
-import { IconMenu } from "../../assets/icons/icon-menu";
 import { IconSearch } from "../../assets/icons/icon-search";
 import { IconUser } from "../../assets/icons/icon-user";
 import { Input } from "../inputs/Input";
+import { ModalRegister } from "../modal-register/modal-register";
 import { ContainerItems } from "./container-items";
 import {
   ContainerInputSearchStyled,
@@ -28,7 +28,7 @@ export function Header({ user }: HeaderProps) {
     <ContainerHeaderStyled>
       <HeaderStyled>
         <WrapperIconMenu>
-          <IconMenu />
+          <ModalRegister user={user} />
         </WrapperIconMenu>
         <IconLogo />
         <ContainerInputSearchStyled>
