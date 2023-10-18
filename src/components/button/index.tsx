@@ -9,9 +9,9 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-export function Button({ children, expanded, compact, variant }: ButtonProps) {
+export function Button({ children, expanded, compact, variant, onClick }: ButtonProps) {
   return (
-    <Container expanded={expanded} compact={compact} variant={variant}>
+    <Container expanded={expanded} compact={compact} variant={variant} onClick={onClick}>
       <TypographyLink>{children}</TypographyLink>
     </Container>
   );
