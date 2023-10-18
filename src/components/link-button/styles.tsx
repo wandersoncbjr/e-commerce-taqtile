@@ -9,6 +9,7 @@ export const ContainerLink = styled.button<LinkButtonProps>`
   display: flex;
   border: none;
   gap: 4px;
+  justify-content: center;
   background: none;
   cursor: pointer;
   :hover {
