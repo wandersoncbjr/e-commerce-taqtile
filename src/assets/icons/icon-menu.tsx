@@ -1,6 +1,11 @@
-export function IconMenu() {
+interface IconMenuProps {
+  onClick: () => void;
+}
+
+export function IconMenu({ onClick }: IconMenuProps) {
   return (
     <svg
+      onClick={onClick}
       width="24"
       height="24"
       viewBox="0 0 24 24"
