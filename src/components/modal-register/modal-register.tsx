@@ -11,14 +11,13 @@ import {
 import { IconClose } from "../../assets/icons/icon-close";
 import { useNavigate } from "react-router-dom";
 
-interface ModalRegister {
+interface ModalRegisterProps {
   user?: string;
 }
 
-export function ModalRegister({ user }: ModalRegister) {
+export function ModalRegister({ user }: ModalRegisterProps) {
   const navigate = useNavigate();
   const [showModalRegister, setShowModalRegister] = useState(false);
-
   return (
     <>
       <IconMenu onClick={() => setShowModalRegister(true)} />
