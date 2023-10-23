@@ -10,14 +10,12 @@ import {
 } from "./styles";
 import { IconClose } from "../../assets/icons/icon-close";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 
 interface ModalRegisterProps {
   user?: string;
 }
 
 export function ModalRegister({ user }: ModalRegisterProps) {
-  const location = useLocation();
   const navigate = useNavigate();
   const [showModalRegister, setShowModalRegister] = useState(false);
   return (
@@ -36,26 +34,16 @@ export function ModalRegister({ user }: ModalRegisterProps) {
               </>
             ) : (
               <>
-                <H2>
-                  {location.pathname === "/login"
-                    ? "Cadastre-se e confira benefícios exclusivos!"
-                    : "Acesse seu cadastro e confira benefícios exclusivos!"}
-                </H2>
+                <H2>Acesse seu cadastro e confira benefícios exclusivos!</H2>
                 <WrapperRegisterButtonsStyled>
-                  {location.pathname !== "/login" && (
-                    <Button
-                      variant="primary"
-                      onClick={() => navigate("/login")}
-                      expanded
-                    >
-                      Entrar
-                    </Button>
-                  )}
-
-                  <LinkButton
-                    variant="default"
-                    expanded={location.pathname !== "/login" ? true : false}
+                  <Button
+                    variant="primary"
+                    onClick={() => navigate("/login")}
+                    expanded
                   >
+                    Entrar
+                  </Button>
+                  <LinkButton variant="default" expanded>
                     Criar conta
                   </LinkButton>
                 </WrapperRegisterButtonsStyled>
