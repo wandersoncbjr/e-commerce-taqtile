@@ -5,13 +5,15 @@ import { H2 } from "../typography/headline/h2";
 import { Button } from "../button";
 import { LinkButton } from "../link-button";
 import { useLoginForm } from "./validation-login/useLoginForm";
+import { Caption } from "../inputs/Input/styles";
 import {
   WrapperButtonLoginStyled,
   WrapperTitleButtonLinkStyled,
 } from "./style";
 
 export function Login() {
-  const { register, handleSubmit, errors, handleForm } = useLoginForm();
+  const { register, handleSubmit, errors, error, handleForm, loading } =
+    useLoginForm();
 
   return (
     <form onSubmit={handleSubmit(handleForm)}>
@@ -32,16 +34,22 @@ export function Login() {
         {...register("password")}
         error={errors.password?.message}
       />
+      <Separator size="small" />
+      {error?.message && <Caption>{error?.message}</Caption>}
       <WrapperTitleButtonLinkStyled>
-        <LinkButton variant="default">Esqueceu sua senha?</LinkButton>
+        <LinkButton variant="default" type="button">
+          Esqueceu sua senha?
+        </LinkButton>
       </WrapperTitleButtonLinkStyled>
       <Separator size="large" />
       <WrapperButtonLoginStyled>
-        <Button expanded variant="primary">
+        <Button expanded variant="primary" type="submit" disabled={loading}>
           Entrar
         </Button>
         <BodySecondary>OU</BodySecondary>
-        <LinkButton variant="default">Cadastrar-se</LinkButton>
+        <LinkButton variant="default" type="button">
+          Cadastrar-se
+        </LinkButton>
       </WrapperButtonLoginStyled>
     </form>
   );
