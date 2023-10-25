@@ -28,4 +28,5 @@ export const colors: Record<string, string> = {
   boxShadowHeader: "rgba(0, 0, 0, 0.1)",
   brandPrimaryGradient:
     "linear-gradient(#F9F9F9, #F9F9F9),radial-gradient(circle at top left,  rgba(11, 70, 135, 1), rgba(0, 121, 188, 1))",
+  brandSecondaryGradient: "linear-gradient(90deg, #0b4687 0%, #0079bc 100%)",
 };
