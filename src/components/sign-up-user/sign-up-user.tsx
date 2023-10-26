@@ -1,5 +1,5 @@
 import { IconAdding } from "../../assets/icons/icon-adding";
-import { useSignUpForm } from "../../pages/sign-up/validation-sign-up/use-form-sign-up";
+import { useSignUpForm } from "./validation-sign-up/use-form-sign-up";
 import { Button } from "../button";
 import Checkbox from "../check-box/check-box";
 import { Input } from "../inputs/Input";
