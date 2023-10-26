@@ -1,4 +1,5 @@
 import { IconAdding } from "../../assets/icons/icon-adding";
+import { useSignUpForm } from "../../pages/sign-up/validation-sign-up/use-form-sign-up";
 import { Button } from "../button";
 import Checkbox from "../check-box/check-box";
 import { Input } from "../inputs/Input";
@@ -27,21 +28,37 @@ import {
 } from "./style";
 
 export function SignUpUser() {
+  const { errors, handleSignUp, handleSubmit, register } = useSignUpForm();
   return (
     <ContainerSignUp>
       <ProgressBar progress={60} />
-      <WrapperSignUp>
+      <WrapperSignUp onSubmit={handleSubmit(handleSignUp)}>
         <ContainerTitleSignUp>
           <H1>Cadastre-se</H1>
           <BodySecondary>Passo 2 de 3</BodySecondary>
         </ContainerTitleSignUp>
         <OptionButtons options={["Pessoa Física", "Pessoa Jurídica"]} />
         <WrapperInputsStyled>
-          <Input label="Nome" type="text" />
-          <Input label="Senha" type="password" />
+          <Input
+            label="Nome"
+            {...register("name")}
+            type="text"
+            error={errors.name?.message}
+          />
+          <Input
+            label="Senha"
+            {...register("password")}
+            type="password"
+            error={errors.password?.message}
+          />
         </WrapperInputsStyled>
         <DividerSelectsAndInputsStyled aria-disabled>
-          <Input label="E-mail" type="text" />
+          <Input
+            label="E-mail"
+            {...register("email")}
+            type="text"
+            error={errors.email?.message}
+          />
           <Select label="Gênero" option={genres} />
           <Input label="CRO" type="text" />
           <Select label="UF" option={brazilStates} />
