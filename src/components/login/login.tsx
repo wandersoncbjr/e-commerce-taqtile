@@ -10,10 +10,12 @@ import {
   WrapperButtonLoginStyled,
   WrapperTitleButtonLinkStyled,
 } from "./style";
+import { useNavigate } from "react-router-dom";
 
 export function Login() {
   const { register, handleSubmit, errors, error, handleForm, loading } =
     useLoginForm();
+  const navigate = useNavigate();
 
   return (
     <form onSubmit={handleSubmit(handleForm)}>
@@ -47,7 +49,11 @@ export function Login() {
           Entrar
         </Button>
         <BodySecondary>OU</BodySecondary>
-        <LinkButton variant="default" type="button">
+        <LinkButton
+          variant="default"
+          type="button"
+          onClick={() => navigate("/signUp")}
+        >
           Cadastrar-se
         </LinkButton>
       </WrapperButtonLoginStyled>
