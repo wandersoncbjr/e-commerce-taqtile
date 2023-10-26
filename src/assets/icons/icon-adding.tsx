@@ -3,7 +3,7 @@ import { colors } from "../../components/typography/colors";
 interface IconAddingProps {
   color?: "brandPrimary" | "brandCtaDark";
 }
-export function IconAdding({ color = "brandCtaDark" }: IconAddingProps) {
+export function IconAdding({ color = "brandPrimary" }: IconAddingProps) {
   return (
     <span>
       <svg
