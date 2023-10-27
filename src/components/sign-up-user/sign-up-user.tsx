@@ -28,8 +28,7 @@ import {
 } from "./style";
 
 export function SignUpUser() {
-  const { errors, handleSignUp, handleSubmit, register, loading } =
-    useSignUpForm();
+  const { errors, handleSignUp, handleSubmit, register } = useSignUpForm();
   return (
     <ContainerSignUp>
       <ProgressBar progress={60} />
@@ -92,9 +91,7 @@ export function SignUpUser() {
           <Button type="button" variant="secondary">
             Voltar para perfil
           </Button>
-          <Button variant="primary" disabled={loading}>
-            Continuar
-          </Button>
+          <Button variant="primary">Continuar</Button>
         </WrapperButtonSignUpStyled>
       </WrapperSignUp>
     </ContainerSignUp>
