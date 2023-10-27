@@ -7,7 +7,7 @@ interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   option: string[];
   label?: string;
   error?: string;
-  placeholder: string;
+  placeholder?: string;
 }
 
 export function Select({
@@ -18,8 +18,9 @@ export function Select({
   ...rest
 }: SelectProps) {
   return (
-    <>
+    <div>
       <Label error={error}>{label}</Label>
+      <Separator size="small" />
       <InputContainerStyled>
         <SelectStyle name="select" {...rest}>
           <option value="" disabled selected>
@@ -35,6 +36,6 @@ export function Select({
       </InputContainerStyled>
       <Separator size="small" />
       {error && <Caption>{error}</Caption>}
-    </>
+    </div>
   );
 }
