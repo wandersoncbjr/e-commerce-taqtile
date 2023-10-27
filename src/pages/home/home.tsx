@@ -12,10 +12,11 @@ export function Home() {
   return (
     <div>
       <Header />
-      <Separator size="medium" />
-      <CarouselBanner imagesBanner={data.imagesBanner}></CarouselBanner>
+      <Separator size="large" />
       <ContainerHomeStyled>
+        <Separator size="large" />
         <SectionBannerCard bannerData={data.banners} />
+        <CarouselBanner imagesBanner={data.imagesBanner}></CarouselBanner>
         <SectionCardsProducts
           data={data.produtos}
           caption="Jóias"
@@ -31,8 +32,8 @@ export function Home() {
           caption="Ofertas"
           title="Acessar todas as ofertas"
         />
+        <CarouselBanner imagesBanner={data.imagesBanner}></CarouselBanner>
       </ContainerHomeStyled>
-      <CarouselBanner imagesBanner={data.imagesBanner}></CarouselBanner>
       <ContainerHomeStyled>
         <SectionCardInformation informartion={data.information} />
       </ContainerHomeStyled>

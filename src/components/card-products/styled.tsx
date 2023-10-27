@@ -10,7 +10,7 @@ export const CardProductsContainerStyled = styled.div`
   display: flex;
   flex-direction: column;
   width: 214px;
-  margin: 16px;
+  margin: 8px;
 
   @media (max-width: 768px) {
     width: 260px;
@@ -58,6 +58,7 @@ export const ContainerImgBannerStyled = styled(ContainerImgStyled)`
 
     @media (min-width: 768px) {
       height: 100%;
+      width: 100%;
     }
   }
 `;
