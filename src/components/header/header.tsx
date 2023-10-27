@@ -1,9 +1,10 @@
+import { useLocation, useNavigate } from "react-router";
 import { IconCart } from "../../assets/icons/icon-cart";
 import { IconLogo } from "../../assets/icons/icon-logo";
-import { IconMenu } from "../../assets/icons/icon-menu";
 import { IconSearch } from "../../assets/icons/icon-search";
 import { IconUser } from "../../assets/icons/icon-user";
 import { Input } from "../inputs/Input";
+import { ModalRegister } from "../modal-register/modal-register";
 import { ContainerItems } from "./container-items";
 import {
   ContainerInputSearchStyled,
@@ -16,6 +17,7 @@ import {
   SectionInputStyled,
 } from "./styles";
 import { useState } from "react";
+import { IconArrowLeft } from "../../assets/icons/icon-arrow-left";
 
 interface HeaderProps {
   user?: string;
@@ -23,12 +25,18 @@ interface HeaderProps {
 
 export function Header({ user }: HeaderProps) {
   const [showInput, setShowInput] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <ContainerHeaderStyled>
       <HeaderStyled>
         <WrapperIconMenu>
-          <IconMenu />
+          {location.pathname === "/login" ? (
+            <IconArrowLeft onClick={() => navigate("/")} />
+          ) : (
+            <ModalRegister user={user} />
+          )}
         </WrapperIconMenu>
         <IconLogo />
         <ContainerInputSearchStyled>
