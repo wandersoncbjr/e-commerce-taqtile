@@ -1,17 +1,28 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import { Container } from "./styles";
 import { TypographyLink } from "../typography/typography-link";
-export interface ButtonProps {
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant: "primary" | "secondary" | "CTA";
   compact?: boolean;
   children: React.ReactNode;
   expanded?: boolean;
-  onClick?: () => void;
 }
 
-export function Button({ children, expanded, compact, variant, onClick }: ButtonProps) {
+export function Button({
+  children,
+  expanded,
+  compact,
+  variant,
+  ...rest
+}: ButtonProps) {
   return (
-    <Container expanded={expanded} compact={compact} variant={variant} onClick={onClick}>
+    <Container
+      {...rest}
+      expanded={expanded}
+      compact={compact}
+      variant={variant}
+    >
       <TypographyLink>{children}</TypographyLink>
     </Container>
   );
