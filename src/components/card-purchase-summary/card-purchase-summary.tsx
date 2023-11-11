@@ -6,6 +6,7 @@ import { Separator } from "../separator";
 import { BodySecondary } from "../typography/body-secondary/body-secondary";
 import { H2 } from "../typography/headline/h2";
 import { Price } from "../typography/price/price";
+import { Line } from "../line/line";
 import {
   ContainerButtonCardPurchaseStyled,
   ContainerTextCardPurchaseStyled,
@@ -44,6 +45,7 @@ export function CardPurchaseSummary({
           <BodySecondary color="baseGray">Frete</BodySecondary>
           <BodySecondary color="baseGrayXDark">{shipping}</BodySecondary>
         </ContainerTextCardPurchaseStyled>
+        <Line />
         <ContainerTextCardPurchaseStyled>
           <BodySecondary color="baseGray">Total</BodySecondary>
           <Price>{total}</Price>
