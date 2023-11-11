@@ -19,7 +19,7 @@ const colorVariants = {
   },
   CTA: {
     background: colors.brandCta,
-    text: colors.brandPrimary,
+    text: colors.brandPrimaryDark,
   },
 };
 
