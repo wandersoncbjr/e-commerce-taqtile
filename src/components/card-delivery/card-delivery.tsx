@@ -18,7 +18,7 @@ export function CardDelivery() {
           <BodySuccess>Frete gratuito</BodySuccess>
         </WappperIconTitle>
         <BodySecondary weight="semiBold">
-          Chegará em até XX dias úteis.
+          Chegará em até 15 dias úteis.
         </BodySecondary>
         <div>
           <BodySecondary>
