@@ -48,8 +48,12 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
           ) : null}
           {icon}
         </InputContainerStyled>
-        <SeparatorStyle size="small" />
-        {error && <Caption>{error}</Caption>}
+        {error && (
+          <>
+            <SeparatorStyle size="small" />
+            <Caption>{error}</Caption>
+          </>
+        )}
       </WrapperInputStyled>
     );
   }
