@@ -3,7 +3,7 @@ import { colors } from "../typography/colors";
 
 export const ContainerCardCartStyled = styled.div`
   padding: 16px;
-  background-color: ${colors.BaseBackground};
+  background-color: ${colors.baseWhite};
   width: 100%;
   img {
     width: 48px;
