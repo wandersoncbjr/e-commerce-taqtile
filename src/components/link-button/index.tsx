@@ -5,7 +5,7 @@ import { ContainerLink } from "./styles";
 export interface LinkButtonProps
   extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  variant: "destructive" | "default";
+  variant: "destructive" | "default" | "baseGray" ;
   expanded?: boolean;
   icon?: JSX.Element;
   iconPosition?: "left" | "right";
