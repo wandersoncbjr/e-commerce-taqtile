@@ -1,5 +1,5 @@
 interface IconCloseProps {
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 export function IconClose({ onClick }: IconCloseProps) {
