@@ -13,7 +13,7 @@ import { Rating } from "../rate";
 import { formatPrice } from "../../price-formatter";
 import { H4 } from "../typography/headline/h4/h4";
 
-interface CardProductsProps {
+export interface CardProductsProps {
   img: string;
   title: string;
   caption: string;
