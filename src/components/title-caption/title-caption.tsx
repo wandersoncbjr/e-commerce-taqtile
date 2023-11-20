@@ -4,14 +4,19 @@ import { H2 } from "../typography/headline/h2";
 import { CaptionTitleStyled } from "./styles";
 
 interface TitleCaptionProps {
-  caption: string | undefined;
-  title: string | undefined;
+  caption?: string;
+  title?: string;
+  icon?: boolean;
 }
-export function TitleCaption({ caption, title }: TitleCaptionProps) {
+export function TitleCaption({ caption, title, icon }: TitleCaptionProps) {
   return (
     <CaptionTitleStyled>
       <H2>{caption}</H2>
-      <LinkButton iconPosition="right" icon={<IconArrow />} variant="default">
+      <LinkButton
+        iconPosition="right"
+        icon={icon ? <IconArrow /> : undefined}
+        variant="default"
+      >
         {title}
       </LinkButton>
     </CaptionTitleStyled>
