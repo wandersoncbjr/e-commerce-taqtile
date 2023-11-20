@@ -21,16 +21,19 @@ export function Home() {
           data={data.produtos}
           caption="Jóias"
           title="Ver mais produtos"
+          icon
         />
         <SectionCardsProducts
           data={data.produtos}
           caption="Roupas"
           title="Ver mais produtos"
+          icon
         />
         <SectionCardsProducts
           data={data.produtos}
           caption="Ofertas"
           title="Acessar todas as ofertas"
+          icon
         />
         <CarouselBanner imagesBanner={data.imagesBanner}></CarouselBanner>
       </ContainerHomeStyled>

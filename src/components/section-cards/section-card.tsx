@@ -11,6 +11,7 @@ import { TitleCaption } from "../title-caption/title-caption";
 export interface SectionCardsProductsProps {
   title?: string;
   caption?: string;
+  icon?: boolean;
   data: {
     Installment: string;
     caption: string;
@@ -26,13 +27,14 @@ export function SectionCardsProducts({
   data,
   title,
   caption,
+  icon,
 }: SectionCardsProductsProps) {
   const cardsToRender = data.slice(0, 6);
   const windowSize = useWindowWidth();
 
   return (
     <ContainerCardsProductsStyled>
-      <TitleCaption title={title} caption={caption} />
+      <TitleCaption title={title} caption={caption} icon={icon} />
       {windowSize >= 769 ? (
         <SectionCardWrapperStyled>
           {cardsToRender?.map((item, index) => (
