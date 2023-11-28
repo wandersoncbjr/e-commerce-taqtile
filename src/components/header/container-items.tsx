@@ -7,28 +7,30 @@ import { colors } from "../typography/colors";
 interface ContainerItemsProps {
   icon: ReactNode;
   title: string;
+  onclick?: () => void;
 }
-export function ContainerItems({ icon, title }: ContainerItemsProps) {
+export function ContainerItems({ onclick, icon, title }: ContainerItemsProps) {
   const [isVisibleModal, setIsVisibleModal] = useState(false);
 
   const togglePopover = () => {
     setIsVisibleModal(!isVisibleModal);
   };
 
-
   return (
-    <ContainerItemStyled>
-      {icon}
-      <TypographyButton
-        style={{
-          color:
-            title === "Entrar" && isVisibleModal ? colors.brandPrimary : "",
-        }}
-        onClick={togglePopover}
-      >
-        {title}
-      </TypographyButton>
-      {title === "Entrar" && isVisibleModal ? <ModalLogin /> : null}
-    </ContainerItemStyled>
+    <div onClick={onclick}>
+      <ContainerItemStyled>
+        {icon}
+        <TypographyButton
+          style={{
+            color:
+              title === "Entrar" && isVisibleModal ? colors.brandPrimary : "",
+          }}
+          onClick={togglePopover}
+        >
+          {title}
+        </TypographyButton>
+        {title === "Entrar" && isVisibleModal ? <ModalLogin /> : null}
+      </ContainerItemStyled>
+    </div>
   );
 }

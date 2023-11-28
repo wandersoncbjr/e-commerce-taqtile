@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { CardDelivery } from "../../components/card-delivery/card-delivery";
 import { CardDiscount } from "../../components/card-discount/card-discount";
 import { CardPurchaseSummary } from "../../components/card-purchase-summary/card-purchase-summary";
@@ -6,6 +7,7 @@ import { Footer } from "../../components/footer/footer";
 import { Header } from "../../components/header/header";
 import { SectionCardsProducts } from "../../components/section-cards/section-card";
 import { data } from "../../data";
+import { getCart } from "../../get-cart";
 import {
   ContainerSectionItemsCartStyled,
   ContainerPageCart,
@@ -15,6 +17,11 @@ import {
 } from "./styles";
 
 export function CartPage() {
+  const [dataCart, setDataCart] = useState(getCart());
+  useEffect(() => {
+    setDataCart(getCart());
+  }, [dataCart]);
+
   return (
     <div>
       <Header />
@@ -22,7 +29,7 @@ export function CartPage() {
         <ContainerSectionItemsCartStyled>
           <WrapperCartPageStyled>
             <WrapperCartStyled>
-              <Cart data={data.produtos} />
+              <Cart data={dataCart} />
             </WrapperCartStyled>
             <ContainerRightCartStyled>
               <CardDelivery />

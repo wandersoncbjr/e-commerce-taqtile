@@ -12,6 +12,8 @@ import { Separator } from "../separator";
 import { Rating } from "../rate";
 import { formatPrice } from "../../price-formatter";
 import { H4 } from "../typography/headline/h4/h4";
+import { useState } from "react";
+import { getCart } from "../../get-cart";
 
 export interface CardProductsProps {
   img: string;
@@ -20,7 +22,7 @@ export interface CardProductsProps {
   price: number;
   Installment: string;
   promotion?: string;
-  quantityStars: number
+  quantityStars?: number;
 }
 
 export function CardProducts({
@@ -30,12 +32,31 @@ export function CardProducts({
   price,
   Installment,
   promotion,
-  quantityStars
+  quantityStars,
 }: CardProductsProps) {
   const formattedPrice = formatPrice(price);
 
   const warnings = () => {
     alert("Site Em Construção");
+  };
+  const [value, setValue] = useState<CardProductsProps[]>([]);
+  const handleAddCart = () => {
+    const newItem = {
+      img,
+      title,
+      caption,
+      price,
+      Installment,
+      promotion,
+    };
+
+    const existingItems = getCart();
+
+    localStorage.setItem(
+      "cartItems",
+      JSON.stringify([...existingItems, newItem])
+    );
+    setValue([...existingItems, newItem]);
   };
 
   return (
@@ -64,7 +85,12 @@ export function CardProducts({
           <Stepper />
         </WrapperButtonStyled>
         <WrapperButtonStyled>
-          <Button expanded variant={"primary"}>
+          <Button
+            type="button"
+            onClick={handleAddCart}
+            expanded
+            variant={"primary"}
+          >
             Adicionar
           </Button>
         </WrapperButtonStyled>
