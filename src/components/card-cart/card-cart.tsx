@@ -14,11 +14,9 @@ import {
   WrapperTextStyled,
 } from "./styles";
 import { CardProductsProps } from "../card-products";
+import { formatPrice } from "../../price-formatter";
 
-type CardCartProps = Pick<
-  CardProductsProps,
-  "title" | "img" | "price" | "caption" | "Installment" | "promotion"
->;
+export type CardCartProps = Omit<CardProductsProps, "quantityStars">;
 export function CardCart({
   title,
   img,
@@ -27,6 +25,7 @@ export function CardCart({
   Installment,
   promotion,
 }: CardCartProps) {
+  const Priceformat = formatPrice(price);
   return (
     <ContainerCardCartStyled>
       <WrapperTextStepperStyled>
@@ -37,7 +36,7 @@ export function CardCart({
             <BodySecondary>{caption}</BodySecondary>
             <WrapperTextStyled>
               <BodySecondary scratched>{promotion}</BodySecondary>
-              <Price>{price}</Price>
+              <Price>{Priceformat}</Price>
               <BodySecondary>{Installment}</BodySecondary>
             </WrapperTextStyled>
           </div>
