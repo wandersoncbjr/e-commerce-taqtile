@@ -6,5 +6,4 @@ export const ContainerCards = styled.div`
   background-color: ${colors.baseWhite};
   box-shadow: 0px 2px 8px 0px rgba(55, 84, 102, 0.15);
   border-radius: 8px;
-  margin-inline: 30px;
 `;
