@@ -59,7 +59,6 @@ export function CardProducts({
     setValue([...existingItems, newItem]);
   };
 
-  console.log(value);
   return (
     <CardProductsContainerStyled>
       <div onClick={warnings} style={{ cursor: "pointer" }}>
