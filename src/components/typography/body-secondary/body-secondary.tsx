@@ -4,7 +4,7 @@ import { colors } from "../colors";
 
 interface BodySecondaryProps {
   scratched?: boolean;
-  color?: "brandCtaDark" | "baseGray" | "baseGrayXDark";
+  color?: "brandCtaDark" | "baseGray" | "baseGrayXDark" | "statesWarningDark";
   weight?: "semiBold";
 }
 
@@ -12,6 +12,7 @@ const colorsMap = {
   brandCtaDark: colors.brandCtaDark,
   baseGray: colors.baseGray,
   baseGrayXDark: colors.baseGrayXDark,
+  statesWarningDark: colors.statesWarningDark,
 };
 
 export const BodySecondary = styled.p<BodySecondaryProps>`
