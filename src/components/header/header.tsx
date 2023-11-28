@@ -60,7 +60,11 @@ export function Header({ user }: HeaderProps) {
           <SeparatorUserStyled>
             <ContainerItems icon={<IconUser />} title="Entrar" />
           </SeparatorUserStyled>
-          <ContainerItems icon={<IconCart />} title="Carrinho" />
+          <ContainerItems
+            onclick={() => navigate("/cart")}
+            icon={<IconCart />}
+            title="Carrinho"
+          />
         </WrapperItemsStyled>
       </HeaderStyled>
       <SectionInputStyled>
