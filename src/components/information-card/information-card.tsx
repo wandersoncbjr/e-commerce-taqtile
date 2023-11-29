@@ -21,7 +21,7 @@ export function InformationCard({
 }: InformationCardProps) {
   return (
     <ContainerCardInformationStyles>
-      <img src={img} />
+      <img src={img} alt="foto do card de informção" />
       <WapperTextCardInformationStyles>
         <BodySecondary color="brandCtaDark">{title}</BodySecondary>
         <H4>{caption}</H4>
