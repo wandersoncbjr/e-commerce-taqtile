@@ -43,7 +43,11 @@ export function ModalRegister({ user }: ModalRegisterProps) {
                   >
                     Entrar
                   </Button>
-                  <LinkButton variant="default" expanded>
+                  <LinkButton
+                    variant="default"
+                    onClick={() => navigate("/signUp")}
+                    expanded
+                  >
                     Criar conta
                   </LinkButton>
                 </WrapperRegisterButtonsStyled>
