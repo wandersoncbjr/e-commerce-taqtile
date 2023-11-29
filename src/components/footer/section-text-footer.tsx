@@ -13,7 +13,7 @@ export function SectionTextFooter({ title, caption }: SectionTextFooterProps) {
       <H3>{title}</H3>
       {caption.map((item, index) => (
         <li key={index}>
-          <a>
+          <a href=" ">
             <H4 color="baseGray">{item}</H4>
           </a>
         </li>

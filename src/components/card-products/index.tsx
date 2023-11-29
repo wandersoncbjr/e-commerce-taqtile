@@ -39,7 +39,7 @@ export function CardProducts({
   const warnings = () => {
     alert("Site Em Construção");
   };
-  const [value, setValue] = useState<CardProductsProps[]>([]);
+  const [, setValue] = useState<CardProductsProps[]>([]);
   const handleAddCart = () => {
     const newItem = {
       img,
